@@ -1,0 +1,172 @@
+:root{
+    --pink:#e84393;
+}
+
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+header{
+    position: fixed;
+    top:0; left:0; right:0;
+    background:#fff;
+    padding:2rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+}
+
+header .logo span{
+    color:var(--pink);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding:0 1.5rem;
+    color: #666;
+}
+
+header .navbar a:hover{
+    color: var(--pink);
+}
+
+header .icons a,
+header .icons a .fas,
+header .icons a .far {
+    /* UKURAN IKON FINAL: 2.5 rem*/
+    font-size: 2.5rem !important; 
+    color: #333;
+    margin-left: 1.5rem;
+    padding: 0 !important; 
+    line-height: 1;
+}
+
+header .icons a:hover,
+header .icons a:active {
+    color: var(--pink);
+}
+
+header #toggler{
+    display: none;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/beground.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    min-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color:var(--pink);
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+
+header label.fas.fa-bars {
+    font-size: 3rem;   /* ubah ukuran di sini */
+    color: #333;
+    padding: 1rem;
+    cursor: pointer;
+    display: block;     /* tampil saat mobile */
+    line-height: 1;
+    background: #fff;
+    border-radius: 0;
+    border: .2rem solid #ddd;
+}
+
+/*bagian humburger*/
+
+/*media queries*/
+@media (max-width: 991px) {
+
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+
+    header .navbar{
+    position: absolute;
+    top: 100%;              /* ⬅️ ini yang penting: navbar muncul DI BAWAH header */
+    left: 0; 
+    right: 0;
+    background: #eee;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    padding: 1rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin:1.5rem;
+        padding:1.5rem;
+        background: #fff;
+        border:1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+} 
+
+@media (max-width:450px) {
+
+    html{
+        font-size: 50%;
+    }
+
+}
