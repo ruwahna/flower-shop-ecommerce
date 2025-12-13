@@ -24,6 +24,21 @@ section{
     padding:2rem 9%;
 }
 
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: 1.2rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background: var(--pink);
+}
+
 header{
     position: fixed;
     top:0; left:0; right:0;
@@ -113,7 +128,7 @@ header label.fas.fa-bars {
     color: #333;
     padding: 1rem;
     cursor: pointer;
-    display: block;     /* tampil saat mobile */
+    display: none;     /* tampil saat mobile */
     line-height: 1;
     background: #fff;
     border-radius: 0;
@@ -133,9 +148,22 @@ header label.fas.fa-bars {
         padding: 2rem;
     }
 
+    section{
+        padding: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+
 }
 
 @media (max-width:768px){
+    
+    /*display block untuk menampilkan hamberger di mobile*/
+    header label.fas.fa-bars {
+        display: block; 
+    }
 
 
     header .navbar{
@@ -160,6 +188,14 @@ header label.fas.fa-bars {
         background: #fff;
         border:1rem solid rgba(0,0,0,.1);
         display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
     }
 } 
 
