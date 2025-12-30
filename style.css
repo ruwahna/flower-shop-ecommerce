@@ -24,6 +24,21 @@ section{
     padding:2rem 9%;
 }
 
+/*REUSABLE COMPONENTS*/
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(225, 52, 153,.05);
+}
+
+.heading span{
+    color: var(--pink);
+}
+
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -38,6 +53,8 @@ section{
 .btn:hover{
     background: var(--pink);
 }
+
+/*HEADER SECTION*/
 
 header{
     position: fixed;
@@ -90,6 +107,20 @@ header #toggler{
     display: none;
 }
 
+header label.fas.fa-bars {
+    font-size: 3rem;   /* ubah ukuran di sini */
+    color: #333;
+    padding: 1rem;
+    cursor: pointer;
+    display: none;     /* tampil saat mobile */
+    line-height: 1;
+    background: #fff;
+    border-radius: 0;
+    border: .2rem solid #ddd;
+}
+
+/*HOME SECTION*/
+
 .home{
     display: flex;
     align-items: center;
@@ -122,18 +153,74 @@ header #toggler{
     line-height: 1.5;
 }
 
-
-header label.fas.fa-bars {
-    font-size: 3rem;   /* ubah ukuran di sini */
-    color: #333;
-    padding: 1rem;
-    cursor: pointer;
-    display: none;     /* tampil saat mobile */
-    line-height: 1;
-    background: #fff;
-    border-radius: 0;
-    border: .2rem solid #ddd;
+.icons-container .icons h3 {
+    font-size: 2rem;
 }
+
+.icons-container .icons span {
+    font-size: 1.7rem;
+}
+
+/*ABOUT SECTION*/
+
+.about .row{
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding: 3rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+}
+
+.about .row .image-container {
+    flex: 1 1 40rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+.about .row .image-container img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.about .row .image-container h3 {
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: 3rem;
+    color: #333;
+    background: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content {
+   flex: 1 1 40rem;
+   padding-top: 0;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #333;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
 
 /*bagian humburger*/
 
@@ -205,4 +292,46 @@ header label.fas.fa-bars {
         font-size: 50%;
     }
 
+    .heading{
+        font-size: 3rem;
+    }
+
+}
+
+
+/* icons-container*/
+
+.icons-container {
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-container .icons {
+    background: #fff;
+    border: .1rem solid rgba(0,0,0,.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex:1 1 25rem;
+
+}
+
+.icons-container .icons img {
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+.icons-container .icons h3 {
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.icons-container .icons span {
+    color:#555;
+    font-size: 1.3rem;
 }
