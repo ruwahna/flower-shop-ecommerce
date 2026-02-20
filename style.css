@@ -325,6 +325,49 @@ header label.fas.fa-bars {
     color: #fff;
 }
 
+/* Container Buket agar posisinya jadi patokan */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Menu pilihan (yang sekarang bikin berantakan) */
+.dropdown-menu {
+    display: none; /* Sembunyi dulu */
+    position: absolute; /* KUNCI: Membuat menu melayang di atas gambar produk */
+    top: 100%; /* Pas di bawah tombol Buket */
+    left: 0;
+    background: #fff;
+    border: 1px solid var(--pink);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    z-index: 1000; /* Supaya tidak tertutup gambar produk */
+    min-width: 180px; /* Lebar menu dropdown */
+    padding: 1rem 0;
+    list-style: none;
+}
+
+/* Munculkan hanya saat diklik (tambah class 'show' lewat JS) */
+.dropdown-container.show .dropdown-menu {
+    display: block;
+}
+
+/* Rapikan list di dalam dropdown */
+.dropdown-menu li {
+    padding: 1rem 2rem !important;
+    font-size: 1.6rem !important;
+    color: #666;
+    cursor: pointer;
+    border: none !important; /* Hapus garis kotak-kotak kecil */
+    display: block;
+    width: 100%;
+}
+
+.dropdown-menu li:hover {
+    background: var(--pink);
+    color: #fff;
+}
+
 
 /* icons-container*/
 
