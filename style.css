@@ -298,6 +298,33 @@ header label.fas.fa-bars {
 
 }
 
+/*tampilan katalog produk */
+.product-filter {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.product-filter li {
+    padding: 0.8rem 2rem;
+    font-size: 1.7rem;
+    background: #fff;
+    color: #666;
+    border: 0.1rem solid var(--pink); /* Pastikan di CSS atas sudah ada --pink: #e84393; */
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.product-filter li.active,
+.product-filter li:hover {
+    background: #e84393; /* Warna pink */
+    color: #fff;
+}
+
 
 /* icons-container*/
 
