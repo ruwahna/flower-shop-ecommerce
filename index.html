@@ -1,1242 +1,602 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="id">
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>inflorist home</title>
-
-    <!-- font awesome cdn link -->
-
+    <title>Inflorist - Toko Buket & Gift Box Premium</title>
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- custom css file link -->
-
-   <link rel="stylesheet" href="style.css">
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    
+    <!-- HEADER SECTION -->
+    <header>
+        <input type="checkbox" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
 
-<!-- header section starts -->
+        <a href="#home" class="logo">flower<span>.</span></a>
 
- <header>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Katalog</a>
+            <a href="#review">Ulasan</a>
+            <a href="#contact">Kontak</a>
+        </nav>
 
-    <input type="checkbox" name="" id="toggler">
+        <div class="icons">
+            <button id="wishlistIconBtn" title="Wishlist / Favorit">
+                <i class="fas fa-heart"></i>
+                <span class="badge wishlist-badge">0</span>
+            </button>
+            <button id="cartIconBtn" title="Keranjang Belanja">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge cart-badge">0</span>
+            </button>
+            <button id="customOrderTriggerBtn" class="open-custom-modal" title="Pesan Buket Custom">
+                <i class="fas fa-wand-magic-sparkles"></i>
+            </button>
+        </div>
+    </header>
+    <!-- HEADER ENDS -->
 
-    <label for="toggler" class="fas fa-bars"></label>
+    <!-- HOME SECTION -->
+    <section class="home" id="home">
+        <div class="content reveal">
+            <span class="tagline"><i class="fas fa-sparkles"></i> Inflorist Premium Bouquet</span>
+            <h3>Sampaikan Perasaanmu Lewat Buket Terbaik</h3>
+            <span>Elegan, Fresh & Penuh Cinta</span>
+            <p>Cari kado yang berkesan? Kami menghadirkan aneka jenis buket mulai dari bunga segar, buket uang (money bouquet), buket snack, buket wisuda, hingga buket custom impianmu. Dibuat dengan rapi & cepat untuk tersenyum manisnya orang tersayang.</p>
+            <div class="btn-group">
+                <a href="#products" class="btn">Lihat Katalog</a>
+                <button class="btn btn-secondary open-custom-modal"><i class="fas fa-wand-magic-sparkles"></i> Pesan Custom</button>
+            </div>
+        </div>
+    </section>
+    <!-- HOME ENDS -->
 
-    
-    <a href="#" class="logo">flower<span>.</span></a>
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <h1 class="heading"> <span>Tentang</span> Kami </h1>
+        <div class="row reveal">
+            <div class="image-container">
+                <img src="assets/about-img.jpg" alt="Toko Buket Inflorist">
+                <h3>Spesialis Perangkai Kebahagiaan</h3>
+            </div>
+            <div class="content">
+                <h3>Kenapa Harus Pesan Buket di Inflorist?</h3>
+                <p>Kami bukan sekadar florist biasa. Kami merangkai setiap buket dengan kreativitas dan kehangatan rasa untuk momen-momen spesial seperti wisuda, ulang tahun, anniversary, atau sekadar kejutan manis untuk orang tercinta.</p>
+                <div class="about-features">
+                    <div class="about-feature-item"><i class="fas fa-check-circle"></i> Bunga Segar & Material Premium</div>
+                    <div class="about-feature-item"><i class="fas fa-check-circle"></i> Pengerjaan Cepat 1-2 Jam</div>
+                    <div class="about-feature-item"><i class="fas fa-check-circle"></i> Bebas Custom Warna & Isi</div>
+                    <div class="about-feature-item"><i class="fas fa-check-circle"></i> Gratis Kartu Ucapan Estetik</div>
+                </div>
+                <a href="#products" class="btn">Jelajahi Produk</a>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT ENDS -->
 
-    <nav class="navbar">
+    <!-- ICONS FEATURES SECTION -->
+    <section class="icons-container reveal">
+        <div class="icons">
+            <img src="assets/free-delivery.jpg" alt="Gratis Ongkir">
+            <div class="info">
+                <h3>Gratis Pengiriman</h3>
+                <span>Untuk area lokal terdekat</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="assets/10 days returns.png" alt="Garansi Kepuasan">
+            <div class="info">
+                <h3>Garansi Kualitas</h3>
+                <span>100% Produk rapi & segar</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="assets/offer & gifts.png" alt="Promo & Hadiah">
+            <div class="info">
+                <h3>Bonus Kartu Ucapan</h3>
+                <span>Diskon & kado di tiap order</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="assets/secure paymens.png" alt="Pembayaran Aman">
+            <div class="info">
+                <h3>Pembayaran Praktis</h3>
+                <span>Transfer Bank, QRIS, COD</span>
+            </div>
+        </div>
+    </section>
+    <!-- ICONS ENDS -->
 
-        <a href="#home">home</a>
+    <!-- PRODUCTS SECTION -->
+    <section class="products" id="products">
+        <h1 class="heading"> Katalog <span>Produk</span> </h1>
 
-        <a href="#about">about</a>
+        <div class="search-and-filter reveal">
+            <div class="search-box-wrapper">
+                <input type="text" id="productSearch" placeholder="Cari nama buket, bunga, snack, atau kado...">
+                <i class="fas fa-search"></i>
+            </div>
 
-        <a href="#products">products</a>
+            <ul class="product-filter">
+                <li class="list active" data-filter="all">Semua</li>
+                <li class="list" data-filter="bunga">Buket Bunga</li>
+                <li class="list" data-filter="uang">Buket Uang</li>
+                <li class="list" data-filter="snack">Buket Snack</li>
+                <li class="list" data-filter="wisuda">Buket Wisuda</li>
+                <li class="list" data-filter="tower">Snack Tower</li>
+                <li class="list" data-filter="frame">Frame Foto</li>
+                <li class="list open-custom-modal" data-filter="custom"><i class="fas fa-magic"></i> Custom</li>
+            </ul>
+        </div>
 
-        <a href="#review">review</a>
+        <div class="box-container" id="productGrid">
 
-        <a href="#contact">contact</a>
+            <!-- Product 1: Buket Bunga -->
+            <div class="box bunga reveal" data-category="bunga" data-id="p1">
+                <span class="discount">Best Seller</span>
+                <div class="image" onclick="openQuickView('p1')">
+                    <img src="assets/buket_bunga.jpg" alt="Buket Mawar Red Romance">
+                    <div class="icons">
+                        <button class="toggle-fav-btn" onclick="event.stopPropagation(); toggleWishlist('p1')" title="Favoritkan"><i class="fas fa-heart"></i></button>
+                        <button class="cart-btn" onclick="event.stopPropagation(); addToCart('p1')"><i class="fas fa-shopping-bag"></i> + Keranjang</button>
+                        <button onclick="event.stopPropagation(); openQuickView('p1')" title="Quick View"><i class="fas fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="content">
+                    <span class="category-tag">Buket Bunga</span>
+                    <h3>Buket Mawar Red Romance</h3>
+                    <div class="price">Rp 150.000 <span>Rp 180.000</span></div>
+                </div>
+            </div>
 
-    </nav>
+            <!-- Product 2: Buket Uang -->
+            <div class="box uang reveal" data-category="uang" data-id="p2">
+                <span class="discount">Populer</span>
+                <div class="image" onclick="openQuickView('p2')">
+                    <img src="assets/buket_uang.jpg" alt="Money Bouquet Elegance">
+                    <div class="icons">
+                        <button class="toggle-fav-btn" onclick="event.stopPropagation(); toggleWishlist('p2')" title="Favoritkan"><i class="fas fa-heart"></i></button>
+                        <button class="cart-btn" onclick="event.stopPropagation(); addToCart('p2')"><i class="fas fa-shopping-bag"></i> + Keranjang</button>
+                        <button onclick="event.stopPropagation(); openQuickView('p2')" title="Quick View"><i class="fas fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="content">
+                    <span class="category-tag">Buket Uang</span>
+                    <h3>Money Bouquet Elegance</h3>
+                    <div class="price">Rp 250.000 <span>Rp 280.000</span></div>
+                </div>
+            </div>
 
-    <div class="icons">
+            <!-- Product 3: Buket Snack -->
+            <div class="box snack reveal" data-category="snack" data-id="p3">
+                <span class="discount">-15%</span>
+                <div class="image" onclick="openQuickView('p3')">
+                    <img src="assets/buket_snack.jpg" alt="Sweet Chocolate Snack Bouquet">
+                    <div class="icons">
+                        <button class="toggle-fav-btn" onclick="event.stopPropagation(); toggleWishlist('p3')" title="Favoritkan"><i class="fas fa-heart"></i></button>
+                        <button class="cart-btn" onclick="event.stopPropagation(); addToCart('p3')"><i class="fas fa-shopping-bag"></i> + Keranjang</button>
+                        <button onclick="event.stopPropagation(); openQuickView('p3')" title="Quick View"><i class="fas fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="content">
+                    <span class="category-tag">Buket Snack</span>
+                    <h3>Sweet Chocolate Snack Bouquet</h3>
+                    <div class="price">Rp 85.000 <span>Rp 100.000</span></div>
+                </div>
+            </div>
 
-        <a href="#" class="fas fa-heart"></a>
+            <!-- Product 4: Buket Wisuda -->
+            <div class="box wisuda reveal" data-category="wisuda" data-id="p4">
+                <span class="discount">Spesial Wisuda</span>
+                <div class="image" onclick="openQuickView('p4')">
+                    <img src="assets/buket_wisuda.jpg" alt="Buket Wisuda Teddy Bear & Sunflower">
+                    <div class="icons">
+                        <button class="toggle-fav-btn" onclick="event.stopPropagation(); toggleWishlist('p4')" title="Favoritkan"><i class="fas fa-heart"></i></button>
+                        <button class="cart-btn" onclick="event.stopPropagation(); addToCart('p4')"><i class="fas fa-shopping-bag"></i> + Keranjang</button>
+                        <button onclick="event.stopPropagation(); openQuickView('p4')" title="Quick View"><i class="fas fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="content">
+                    <span class="category-tag">Buket Wisuda</span>
+                    <h3>Buket Wisuda Teddy Sunflower</h3>
+                    <div class="price">Rp 135.000 <span>Rp 160.000</span></div>
+                </div>
+            </div>
 
-        <a href="#" class="fas fa-shopping-cart"></a>
+            <!-- Product 5: Snack Tower -->
+            <div class="box tower reveal" data-category="tower" data-id="p5">
+                <span class="discount">Hitz!</span>
+                <div class="image" onclick="openQuickView('p5')">
+                    <img src="assets/snack_tower.jpg" alt="Birthday Snack Tower Tier 3">
+                    <div class="icons">
+                        <button class="toggle-fav-btn" onclick="event.stopPropagation(); toggleWishlist('p5')" title="Favoritkan"><i class="fas fa-heart"></i></button>
+                        <button class="cart-btn" onclick="event.stopPropagation(); addToCart('p5')"><i class="fas fa-shopping-bag"></i> + Keranjang</button>
+                        <button onclick="event.stopPropagation(); openQuickView('p5')" title="Quick View"><i class="fas fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="content">
+                    <span class="category-tag">Snack Tower</span>
+                    <h3>Birthday Snack Tower Tier 3</h3>
+                    <div class="price">Rp 175.000 <span>Rp 200.000</span></div>
+                </div>
+            </div>
 
-        <a href="#" class="fas fa-user"></a>
+            <!-- Product 6: Frame Foto Dried Flowers -->
+            <div class="box frame reveal" data-category="frame" data-id="p6">
+                <span class="discount">Estetik</span>
+                <div class="image" onclick="openQuickView('p6')">
+                    <img src="assets/frame_foto.jpg" alt="Dried Flower Wooden Photo Frame">
+                    <div class="icons">
+                        <button class="toggle-fav-btn" onclick="event.stopPropagation(); toggleWishlist('p6')" title="Favoritkan"><i class="fas fa-heart"></i></button>
+                        <button class="cart-btn" onclick="event.stopPropagation(); addToCart('p6')"><i class="fas fa-shopping-bag"></i> + Keranjang</button>
+                        <button onclick="event.stopPropagation(); openQuickView('p6')" title="Quick View"><i class="fas fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="content">
+                    <span class="category-tag">Frame Foto</span>
+                    <h3>Dried Flower Wooden Frame</h3>
+                    <div class="price">Rp 120.000 <span>Rp 145.000</span></div>
+                </div>
+            </div>
 
+            <!-- Product 7: Buket Bunga Pink Soft -->
+            <div class="box bunga reveal" data-category="bunga" data-id="p7">
+                <span class="discount">New</span>
+                <div class="image" onclick="openQuickView('p7')">
+                    <img src="assets/buket1.jpg" alt="Buket Bunga Soft Pink Peony">
+                    <div class="icons">
+                        <button class="toggle-fav-btn" onclick="event.stopPropagation(); toggleWishlist('p7')" title="Favoritkan"><i class="fas fa-heart"></i></button>
+                        <button class="cart-btn" onclick="event.stopPropagation(); addToCart('p7')"><i class="fas fa-shopping-bag"></i> + Keranjang</button>
+                        <button onclick="event.stopPropagation(); openQuickView('p7')" title="Quick View"><i class="fas fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="content">
+                    <span class="category-tag">Buket Bunga</span>
+                    <h3>Buket Bunga Soft Pink Peony</h3>
+                    <div class="price">Rp 110.000 <span>Rp 130.000</span></div>
+                </div>
+            </div>
+
+            <!-- Product 8: Buket Uang Sultan -->
+            <div class="box uang reveal" data-category="uang" data-id="p8">
+                <span class="discount">Mewah</span>
+                <div class="image" onclick="openQuickView('p8')">
+                    <img src="assets/buket_uang.jpg" alt="Money Bouquet Royal Red">
+                    <div class="icons">
+                        <button class="toggle-fav-btn" onclick="event.stopPropagation(); toggleWishlist('p8')" title="Favoritkan"><i class="fas fa-heart"></i></button>
+                        <button class="cart-btn" onclick="event.stopPropagation(); addToCart('p8')"><i class="fas fa-shopping-bag"></i> + Keranjang</button>
+                        <button onclick="event.stopPropagation(); openQuickView('p8')" title="Quick View"><i class="fas fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="content">
+                    <span class="category-tag">Buket Uang</span>
+                    <h3>Money Bouquet Royal Red</h3>
+                    <div class="price">Rp 350.000 <span>Rp 400.000</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- PRODUCTS ENDS -->
+
+    <!-- REVIEWS SECTION -->
+    <section class="review" id="review">
+        <h1 class="heading"> Ulasan <span>Pelanggan</span> </h1>
+
+        <div class="box-container reveal">
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Pesanan buket wisuda temanku bagus banget! Pengiriman cepat, bunganya masih sangat segar dan pita wrapping-nya rapi sekali. Recommended florist!"</p>
+                <div class="user">
+                    <img src="assets/costom's.jpg" alt="Pelanggan Inflorist">
+                    <div class="user-info">
+                        <h3>Nadia Kirana</h3>
+                        <span>Pelanggan Setia</span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Money bouquet-nya diproses rapi banget dan uangnya gak rusak. Respon admin lewat WhatsApp sangat ramah dan kooperatif. Makasih Inflorist!"</p>
+                <div class="user">
+                    <img src="assets/costom's.jpg" alt="Pelanggan Inflorist">
+                    <div class="user-info">
+                        <h3>Budi Santoso</h3>
+                        <span>Pembeli Verifikasi</span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>"Snack tower tier 3 langganan buat ulang tahun keponakan. Anak-anak suka sekali! Desainnya lucu dan harganya sangat bersahabat."</p>
+                <div class="user">
+                    <img src="assets/costom's.jpg" alt="Pelanggan Inflorist">
+                    <div class="user-info">
+                        <h3>Siti Rahma</h3>
+                        <span>Pelanggan Setia</span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+            </div>
+
+        </div>
+    </section>
+    <!-- REVIEWS ENDS -->
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h1 class="heading"> <span>Hubungi</span> Kami </h1>
+
+        <!-- Contact Info Cards Bar -->
+        <div class="contact-info-cards reveal">
+            <div class="info-card">
+                <div class="icon-box"><i class="fab fa-whatsapp"></i></div>
+                <div class="info-details">
+                    <h4>WhatsApp Store</h4>
+                    <p>085233749306 (Respon Cepat)</p>
+                    <a href="https://wa.me/6285233749306" target="_blank" class="card-link">Chat Sekarang <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-details">
+                    <h4>Workshop Store</h4>
+                    <p>Jawa Timur, Indonesia</p>
+                    <span class="card-sub">Bisa pesan & ambil langsung</span>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="icon-box"><i class="fas fa-clock"></i></div>
+                <div class="info-details">
+                    <h4>Jam Operasional</h4>
+                    <p>Senin - Minggu (08.00 - 21.00)</p>
+                    <span class="card-sub">Buka Setiap Hari</span>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                <div class="info-details">
+                    <h4>Email Layanan</h4>
+                    <p>order@inflorist.com</p>
+                    <span class="card-sub">Untuk kerjasama / inquiry</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row reveal">
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                <div class="form-header">
+                    <h3>Kirim Pesan & Konsultasi</h3>
+                    <p>Isi formulir di bawah ini, tim florist kami akan langsung membalas via WhatsApp.</p>
+                </div>
+
+                <div class="topic-selector">
+                    <label class="topic-label">Topik Pertanyaan:</label>
+                    <div class="topic-pills">
+                        <label class="pill-radio"><input type="radio" name="contactTopic" value="Tanya Stok & Harga" checked> <span>Tanya Stok</span></label>
+                        <label class="pill-radio"><input type="radio" name="contactTopic" value="Konsultasi Custom Buket"> <span>Custom Buket</span></label>
+                        <label class="pill-radio"><input type="radio" name="contactTopic" value="Cek Status Pesanan"> <span>Status Order</span></label>
+                    </div>
+                </div>
+
+                <div class="input-field-group">
+                    <div class="field-wrapper">
+                        <i class="fas fa-user field-icon"></i>
+                        <input type="text" id="contactName" placeholder="Nama Lengkap Anda" class="box" required>
+                    </div>
+                    <div class="field-wrapper">
+                        <i class="fas fa-envelope field-icon"></i>
+                        <input type="email" id="contactEmail" placeholder="Alamat Email (opsional)" class="box">
+                    </div>
+                </div>
+
+                <div class="field-wrapper">
+                    <i class="fab fa-whatsapp field-icon"></i>
+                    <input type="tel" id="contactPhone" placeholder="Nomor WhatsApp (Contoh: 08123456789)" class="box" required>
+                </div>
+
+                <div class="field-wrapper">
+                    <i class="fas fa-comment-dots field-icon"></i>
+                    <textarea id="contactMessage" placeholder="Tuliskan pesan, pertanyaan, atau ide buket impianmu di sini..." class="box" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-wa btn-contact-submit">
+                    <i class="fab fa-whatsapp"></i> Kirim Pesan Langsung ke WA
+                </button>
+            </form>
+
+            <div class="image-wrapper">
+                <img src="assets/contact_shop.jpg" alt="Workshop Toko Buket Inflorist">
+                <div class="florist-live-badge">
+                    <span class="pulse-dot"></span> Tim Florist Online & Siap Membantu
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT ENDS -->
+
+    <!-- FOOTER SECTION -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Navigasi Cepat</h3>
+                <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+                <a href="#about"><i class="fas fa-chevron-right"></i> About Us</a>
+                <a href="#products"><i class="fas fa-chevron-right"></i> Katalog Produk</a>
+                <a href="#review"><i class="fas fa-chevron-right"></i> Ulasan Pelanggan</a>
+                <a href="#contact"><i class="fas fa-chevron-right"></i> Kontak</a>
+            </div>
+
+            <div class="box">
+                <h3>Kategori Buket</h3>
+                <a href="#products" onclick="filterProducts('bunga')"><i class="fas fa-chevron-right"></i> Buket Bunga Segar</a>
+                <a href="#products" onclick="filterProducts('uang')"><i class="fas fa-chevron-right"></i> Money Bouquet</a>
+                <a href="#products" onclick="filterProducts('snack')"><i class="fas fa-chevron-right"></i> Buket Snack & Cokelat</a>
+                <a href="#products" onclick="filterProducts('wisuda')"><i class="fas fa-chevron-right"></i> Buket Wisuda Spesial</a>
+                <a href="#products" onclick="filterProducts('tower')"><i class="fas fa-chevron-right"></i> Snack Tower</a>
+            </div>
+
+            <div class="box">
+                <h3>Layanan Pelanggan</h3>
+                <a href="#" class="open-custom-modal"><i class="fas fa-wand-magic-sparkles"></i> Custom Order Builder</a>
+                <a href="#" id="openCartFooterLink"><i class="fas fa-shopping-cart"></i> Keranjang Belanja Saya</a>
+                <a href="#" id="openWishlistFooterLink"><i class="fas fa-heart"></i> Buket Favorit Saya</a>
+            </div>
+
+            <div class="box">
+                <h3>Kontak Store</h3>
+                <a href="https://wa.me/6285233749306" target="_blank"><i class="fab fa-whatsapp"></i> 085233749306</a>
+                <a href="mailto:info@inflorist.com"><i class="fas fa-envelope"></i> order@inflorist.com</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Jawa Timur, Indonesia</a>
+                <img src="assets/payment.jpg" alt="Metode Pembayaran">
+            </div>
+        </div>
+
+        <div class="credit"> Dibuat dengan <i class="fas fa-heart" style="color: var(--pink);"></i> oleh <span>Inflorist Team</span> | All Rights Reserved</div>
+    </section>
+    <!-- FOOTER ENDS -->
+
+    <!-- SHOPPING CART DRAWER SIDEBAR -->
+    <div class="drawer-overlay" id="cartOverlay"></div>
+    <div class="drawer" id="cartDrawer">
+        <div class="drawer-header">
+            <h3><i class="fas fa-shopping-bag"></i> Keranjang Belanja</h3>
+            <button class="close-btn" id="closeCartBtn">&times;</button>
+        </div>
+        <div class="drawer-body" id="cartBody">
+            <!-- Items rendered via JavaScript -->
+        </div>
+        <div class="drawer-footer">
+            <div class="cart-subtotal">
+                <span>Total Belanja:</span>
+                <span id="cartSubtotal">Rp 0</span>
+            </div>
+            <button class="btn btn-wa" style="width: 100%;" onclick="checkoutWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
+            </button>
+        </div>
     </div>
 
- </header>
-
-
- <!-- header section ends -->
-
-
-
-<!-- home section starts -->
-
- 
-
-<section class="home" id="home">
-
-    <div class="content">
-
-        <h3>Inflorist Home</h3>
-
-        <span>Sampaikan Perasaanmu Lewat Buket Terbaik</span>
-
-        <p>Cari kado yang berkesan? Kami menghadirkan aneka jenis 
-
-        buket mulai dari bunga segar, buket uang (money bouquet), 
-
-        buket snack, hingga buket custom lainnya. Dibuat dengan penuh 
-
-        cinta dan kreativitas untuk memastikan senyum di wajah orang tersayang kamu</p>
-
-        <a href="#" class="btn">Lihat Katalog</a>
-
+    <!-- WISHLIST DRAWER SIDEBAR -->
+    <div class="drawer-overlay" id="wishlistOverlay"></div>
+    <div class="drawer" id="wishlistDrawer">
+        <div class="drawer-header">
+            <h3><i class="fas fa-heart" style="color: var(--pink);"></i> Buket Favorit</h3>
+            <button class="close-btn" id="closeWishlistBtn">&times;</button>
+        </div>
+        <div class="drawer-body" id="wishlistBody">
+            <!-- Items rendered via JavaScript -->
+        </div>
     </div>
 
-</section>
-
-
-
-<!-- home section ends -->
-
-
-
-<!-- about section starts -->
-
-
-
-<section class="about" id="about">
-
-    <h1 class="heading"> <span> about </span> us </h1>
-
-    <div class="row">
-
-        <div class="image-container">
-
-            <img src="/assets/about-img.jpg" alt="Flower Shop">
-
-            <h3>best flower sellers</h3>
-
+    <!-- QUICK VIEW PRODUCT MODAL -->
+    <div class="modal-overlay" id="quickViewModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('quickViewModal')">&times;</button>
+            <div class="quick-view-body" id="quickViewContent">
+                <!-- Content inserted dynamically via JS -->
+            </div>
         </div>
-
-        <div class="content">
-
-            <h3>Kenapa Harus Pesan di Sini?</h3>
-
-            <p>Kami bukan sekadar florist biasa. 
-
-            Kami adalah spesialis perangkai kebahagiaan 
-
-            yang melayani pembuatan berbagai macam buket sesuai keinginanmu. 
-
-            Baik itu untuk wisuda, ulang tahun, atau sekadar kejutan manis, 
-
-            kami punya solusinya.</p>
-
-            <p>Dengan bahan berkualitas, pengerjaan cepat, 
-
-            dan harga yang ramah di kantong, kami siap membantu kamu 
-
-            memberikan kejutan terbaik tanpa ribet.</p>
-
-            <a href="#" class="btn">Lihat Katalog</a>
-
-        </div>
-
     </div>
 
-</section>
+    <!-- CUSTOM ORDER BUILDER MODAL -->
+    <div class="modal-overlay" id="customOrderModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('customOrderModal')">&times;</button>
+            <div class="custom-order-body">
+                <h3><i class="fas fa-wand-magic-sparkles" style="color: var(--pink);"></i> Custom Order Builder</h3>
+                <p class="subtitle">Rancang Buket Impianmu Sendiri Sesuai Budget & Keinginan</p>
+                <form id="customOrderForm" onsubmit="handleCustomOrderSubmit(event)">
+                    <div class="form-group">
+                        <label><i class="fas fa-tag"></i> Jenis Buket</label>
+                        <select id="customType" required>
+                            <option value="Buket Bunga Segar">Buket Bunga Segar</option>
+                            <option value="Buket Uang (Money Bouquet)">Buket Uang (Money Bouquet)</option>
+                            <option value="Buket Snack & Cokelat">Buket Snack & Cokelat</option>
+                            <option value="Buket Wisuda & Boneka">Buket Wisuda & Boneka</option>
+                            <option value="Snack Tower">Snack Tower</option>
+                            <option value="Frame Foto Dried Flower">Frame Foto Dried Flower</option>
+                            <option value="Buket Mix / Custom Lainnya">Buket Mix / Custom Lainnya</option>
+                        </select>
+                    </div>
 
+                    <div class="form-group">
+                        <label><i class="fas fa-coins"></i> Budget Estimasi</label>
+                        <select id="customBudget" required>
+                            <option value="Rp 50.000 - Rp 100.000">Rp 50.000 - Rp 100.000</option>
+                            <option value="Rp 100.000 - Rp 200.000">Rp 100.000 - Rp 200.000</option>
+                            <option value="Rp 200.000 - Rp 350.000">Rp 200.000 - Rp 350.000</option>
+                            <option value="> Rp 350.000 (Sultan/Spesial)">> Rp 350.000 (Sultan/Spesial)</option>
+                        </select>
+                    </div>
 
+                    <div class="form-group">
+                        <label><i class="fas fa-palette"></i> Tema Warna Kain Wrapping</label>
+                        <input type="text" id="customColor" placeholder="Contoh: Soft Pink, Navy Gold, Hitam Minimalis, Pastel..." required>
+                    </div>
 
+                    <div class="form-group">
+                        <label><i class="fas fa-comment-dots"></i> Isi Kartu Ucapan</label>
+                        <textarea id="customMessage" placeholder="Tuliskan ucapan singkat yang ingin dicetak di kartu (Contoh: Happy Graduation Sahabatku!)..." rows="3"></textarea>
+                    </div>
 
+                    <div class="form-group">
+                        <label><i class="fas fa-calendar-alt"></i> Tanggal Pengiriman / Acara</label>
+                        <input type="date" id="customDate" required>
+                    </div>
 
-<!-- about section ends -->
-
-
-
-<!-- icons Section starts -->
-
-<section class="icons-container">
-
-    <div class="icons">
-
-        <img src="/assets/free-delivery.jpg" alt="">
-
-        <div class="info">
-
-            <h3>free delivery</h3>
-
-            <span>on all order</span>
-
+                    <button type="submit" class="btn btn-wa" style="width: 100%; margin-top: 1rem;">
+                        <i class="fab fa-whatsapp"></i> Kirim Pesanan Custom ke WA
+                    </button>
+                </form>
+            </div>
         </div>
-
     </div>
 
-    <div class="icons">
-
-        <img src="/assets/10 days returns.png" alt="">
-
-        <div class="info">
-
-            <h3>10 days returns</h3>
-
-            <span>moneyback guarantee</span>
-
-        </div>
-
+    <!-- FLOATING WHATSAPP BUTTON WIDGET -->
+    <div class="wa-floating-btn-container">
+        <a href="https://wa.me/6285233749306" target="_blank" class="wa-floating-btn" title="Chat WhatsApp Fast Response">
+            <i class="fab fa-whatsapp"></i>
+            <span class="wa-tooltip">Chat Florist WA</span>
+        </a>
     </div>
 
-     <div class="icons">
+    <!-- FALLING FLOWER PETALS WRAPPER -->
+    <div id="petalsFallingContainer" class="petals-falling-wrapper"></div>
 
-        <img src="/assets/offer & gifts.png" alt="">
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toastContainer"></div>
 
-        <div class="info">
-
-            <h3>offer & gifts</h3>
-
-            <span>on all order</span>
-
-        </div>
-
-    </div>
-
-     <div class="icons">
-
-        <img src="/assets/secure paymens.png" alt="">
-
-        <div class="info">
-
-            <h3>secure paymens</h3>
-
-            <span>protected by paypal</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- icons Section ends -->
-
-
-
-<!-- icons Section starts -->
-
-
-
-<section class="products" id="products">
-
-    <h1 class="heading"> latest <span>products</span></h1>
-
-    <ul class="product-filter">
-
-        <li class="list" data-filter="all">semua</li>
-
-        <li class="list" data-filter="tower">Snake Tower</li>
-
-        <li class="list dropdown-container">
-            <div class="dropdown-trigger">Buket <i class="fas fa-caret-down"></i></div>
-                <ul class="dropdown-menu">
-
-                    <li data-filter="bunga">Buket Bunga</li>
-                    <li data-filter="uang">Buket Uang</li>
-                    <li data-filter="snack">Buket Snack</li>
-                    <li data-filter="wisuda">Buket Wisuda</li>
-                    <li data-filter="ulang-tahun">Buket Ulang Tahun</li>
-                    <li data-filter="custom">Buket Custom</li>
-                </ul>
-            </li>
-        
-        <li class="list" data-filter="snack">Hampers & Gift Box</li>
-        
-        <li class="list" data-filter="uang">Frame Foto</li>
-
-        <li class="list" data-filter="uang">Papan Bunga</li>
-
-        <li class="list" data-filter="uang">Custom</li>
-
-    </ul>
-
-    <div class="box-container">
-
-        
-        <div class="box ">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>flower pot</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-        </div>
-
-         <div class="box">
-
-            <span class="discount">-15%</span>
-
-            <div class="image">
-
-                <img src="/assets/buket1.jpg" alt="">
-
-                <div class="icons">
-
-                    <a href="#" class="fas fa-heart"></a>
-
-                    <a href="#" class="cart-btn">add to cart</a>
-
-                    <a href="#" class="fas fa-share"></a>
-
-                </div>
-
-            </div>
-
-            <div class="content">
-
-                <h3>flower pot</h3>
-
-                <div class="price"> $35.00 <span>$15.00</span></div>
-
-            </div>
-
-        </div>
-
-
-
-         <div class="box">
-
-            <span class="discount">-5%</span>
-
-            <div class="image">
-
-                <img src="/assets/buket1.jpg" alt="">
-
-                <div class="icons">
-
-                    <a href="#" class="fas fa-heart"></a>
-
-                    <a href="#" class="cart-btn">add to cart</a>
-
-                    <a href="#" class="fas fa-share"></a>
-
-                </div>
-
-            </div>
-
-            <div class="content">
-
-                <h3>flower pot</h3>
-
-                <div class="price"> $35.00 <span>$15.00</span></div>
-
-            </div>
-
-        </div>
-
-
-
-         <div class="box">
-
-            <span class="discount">-20%</span>
-
-            <div class="image">
-
-                <img src="/assets/buket1.jpg" alt="">
-
-                <div class="icons">
-
-                    <a href="#" class="fas fa-heart"></a>
-
-                    <a href="#" class="cart-btn">add to cart</a>
-
-                    <a href="#" class="fas fa-share"></a>
-
-                </div>
-
-            </div>
-
-            <div class="content">
-
-                <h3>flower pot</h3>
-
-                <div class="price"> $35.00 <span>$15.00</span></div>
-
-            </div>
-
-        </div>
-
-
-
-         <div class="box">
-
-            <span class="discount">-17%</span>
-
-            <div class="image">
-
-                <img src="/assets/buket1.jpg" alt="">
-
-                <div class="icons">
-
-                    <a href="#" class="fas fa-heart"></a>
-
-                    <a href="#" class="cart-btn">add to cart</a>
-
-                    <a href="#" class="fas fa-share"></a>
-
-                </div>
-
-            </div>
-
-            <div class="content">
-
-                <h3>flower pot</h3>
-
-                <div class="price"> $35.00 <span>$15.00</span></div>
-
-            </div>
-
-        </div>
-
-
-
-         <div class="box">
-
-            <span class="discount">-3%</span>
-
-            <div class="image">
-
-                <img src="/assets/buket1.jpg" alt="">
-
-                <div class="icons">
-
-                    <a href="#" class="fas fa-heart"></a>
-
-                    <a href="#" class="cart-btn">add to cart</a>
-
-                    <a href="#" class="fas fa-share"></a>
-
-                </div>
-
-            </div>
-
-            <div class="content">
-
-                <h3>flower pot</h3>
-
-                <div class="price"> $35.00 <span>$15.00</span></div>
-
-            </div>
-
-        </div>
-
-
-
-         <div class="box">
-
-            <span class="discount">-18%</span>
-
-            <div class="image">
-
-                <img src="/assets/buket1.jpg" alt="">
-
-                <div class="icons">
-
-                    <a href="#" class="fas fa-heart"></a>
-
-                    <a href="#" class="cart-btn">add to cart</a>
-
-                    <a href="#" class="fas fa-share"></a>
-
-                </div>
-
-            </div>
-
-            <div class="content">
-
-                <h3>flower pot</h3>
-
-                <div class="price"> $35.00 <span>$15.00</span></div>
-
-            </div>
-
-        </div>
-
-         <div class="box">
-
-            <span class="discount">-10%</span>
-
-            <div class="image">
-
-                <img src="/assets/buket1.jpg" alt="">
-
-                <div class="icons">
-
-                    <a href="#" class="fas fa-heart"></a>
-
-                    <a href="#" class="cart-btn">add to cart</a>
-
-                    <a href="#" class="fas fa-share"></a>
-
-                </div>
-
-            </div>
-
-            <div class="content">
-
-                <h3>flower pot</h3>
-
-                <div class="price"> $35.00 <span>$15.00</span></div>
-
-            </div>
-
-        </div>
-
-         <div class="box">
-
-            <span class="discount">-5%</span>
-
-            <div class="image">
-
-                <img src="/assets/buket1.jpg" alt="">
-
-                <div class="icons">
-
-                    <a href="#" class="fas fa-heart"></a>
-
-                    <a href="#" class="cart-btn">add to cart</a>
-
-                    <a href="#" class="fas fa-share"></a>
-
-                </div>
-
-            </div>
-
-            <div class="content">
-
-                <h3>flower pot</h3>
-
-                <div class="price"> $35.00 <span>$15.00</span></div>
-
-            </div>
-
-         </div>
-
-         <!--bagian isi snaketower-->
-         <div class="box tower">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Snake Tower">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Snake Tower</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-         <div class="box tower">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Snake Tower">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Snake Tower</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-          <!--bagian isi buket bunga-->
-         <div class="box bunga">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Bunga">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Bunga</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-         <div class="box bunga">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Bunga">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Bunga</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-          <!--bagian isi buket uang-->
-         <div class="box uang">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Uang">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Uang</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-        
-         <div class="box uang">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Uang">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Uang</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-         
-          <!--bagian isi buket snake-->
-         <div class="box snack">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Snack">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Snack</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-         <div class="box snack">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Snack">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Snack</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-           <!--bagian isi buket wisuda -->
-         <div class="box wisuda">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Wisuda">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Wisuda</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-         <div class="box wisuda">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Wisuda">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Wisuda</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-           <!--bagian isi buket ulang tahun-->
-         <div class="box ulang-tahun">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Ulang Tahun">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Ulang Tahun</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-         <div class="box ulang-tahun">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Ulang Tahun">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Ulang Tahun</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-         <!--bagian isi buket custom-->
-
-         <div class="box custom">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Custom">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Custom</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-         <div class="box custom">
-        
-            <span class="discount">-10%</span>
-        
-            <div class="image">
-        
-                <img src="/assets/buket1.jpg" alt="Buket Custom">
-        
-                <div class="icons">
-        
-                    <a href="#" class="fas fa-heart"></a>
-        
-                    <a href="#" class="cart-btn">add to cart</a>
-        
-                    <a href="#" class="fas fa-share"></a>
-        
-                </div>
-        
-            </div>
-
-            <div class="content">
-        
-                <h3>Buket Custom</h3>
-        
-                <div class="price"> $35.00 <span>$15.00</span></div>
-        
-            </div>
-        
-         </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- icons Section ends -->
-
-
-
-<!--review section starts -->
-
-<section class="review" id="review">
-
-<h1 class="heading"> custom's <span>review</span></h1>
-
-<div class="box-container">
-
-    <div class="box">
-
-        <div class="stars">
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-        </div>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-
-        Architecto nihil laudantium magni ex numquam explicabo voluptas 
-
-        unde repellendus officiis possimus omnis magnam voluptatibus,
-
-        odio ab asperiores, sed impedit recusandae commodi.</p>
-
-        <div class="user">
-
-            <img src="/assets/costom's.jpg" alt="">
-
-            <div class="user-info">
-
-                <h3>john deo</h3>
-
-                <span>happy customer</span>
-
-            </div>
-
-        </div>
-
-        <span class="fas fa-quote-right"></span>
-
-    </div>
-
-    <div class="box">
-
-        <div class="stars">
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-        </div>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-
-        Architecto nihil laudantium magni ex numquam explicabo voluptas 
-
-        unde repellendus officiis possimus omnis magnam voluptatibus,
-
-        odio ab asperiores, sed impedit recusandae commodi.</p>
-
-        <div class="user">
-
-            <img src="/assets/costom's.jpg" alt="">
-
-            <div class="user-info">
-
-                <h3>john deo</h3>
-
-                <span>happy customer</span>
-
-            </div>
-
-        </div>
-
-        <span class="fas fa-quote-right"></span>
-
-    </div>
-
-    <div class="box">
-
-        <div class="stars">
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star"></i>
-
-        </div>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-
-        Architecto nihil laudantium magni ex numquam explicabo voluptas 
-
-        unde repellendus officiis possimus omnis magnam voluptatibus,
-
-        odio ab asperiores, sed impedit recusandae commodi.</p>
-
-        <div class="user">
-
-            <img src="/assets/costom's.jpg" alt="">
-
-            <div class="user-info">
-
-                <h3>john deo</h3>
-
-                <span>happy customer</span>
-
-            </div>
-
-        </div>
-
-        <span class="fas fa-quote-right"></span>
-
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!--review section ends -->
-
-
-
-<!--contact section starts -->
-
-
-
-<section class="contact" id="contact">
-
-  <h1 class="heading"> <span> contact </span> us </h1>
-
-  <div class="row">
-
-    <form action="">
-
-        <input type="text" placeholder="name" class="box">
-
-        <input type="email" placeholder="email" class="box">
-
-        <input type="number" placeholder="number" class="box">
-
-        <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
-
-        <input type="submit" value="send message" class="btn">
-
-    </form>
-
-    <div class="image">
-
-        <img src="/assets/contact.jpg" alt="">
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!--contact section ends -->
-
-
-
-<!--contact section starts -->
-
-<section class="footer">
-
-    <div class="box-container">
-
-        <div class="box">
-
-            <h3>quick links</h3>
-
-            <a href="#">home</a>
-
-            <a href="#">about</a>
-
-            <a href="#">products</a>
-
-            <a href="#">review</a>
-
-            <a href="#">contact</a>
-
-        </div>
-
-        <div class="box">
-
-            <h3>extra links</h3>
-
-            <a href="#">my account</a>
-
-            <a href="#">my order</a>
-
-            <a href="#">my favorite</a>
-
-        </div>
-
-        <div class="box">
-
-            <h3>locations</h3>
-
-            <a href="#">india</a>
-
-            <a href="#">USA</a>
-
-            <a href="#">japan</a>
-
-            <a href="#">france</a>
-
-        </div>
-
-        <div class="box">
-
-            <h3>contact info</h3>
-
-            <a href="#">085233749306</a>
-
-            <a href="#">example@gmail.com</a>
-
-            <a href="#">mumbai, india - 400104</a>
-
-            <img src="/assets/payment.jpg" alt="">
-
-        </div>
-
-    </div>
-
-    <div class="credit"> created by <span> mr. web designer </span> | all rights reserved</div>
-
-</section>
-
-
-
-<!--contact section ends -->
-
-<script src="script.js"></script>
-
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 </body>
-
 </html>
